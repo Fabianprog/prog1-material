@@ -2,7 +2,7 @@ package matrices
 
 func ExamplePrintMatrix() {
 
-	m1 := [][]int{{1, 2}, {3, 4, 5}}
+	m1 := [][]int{{1, 1, 1}, {1, 1, 1}, {1, 1, 1}}
 
 	PrintMatrix(m1)
 
