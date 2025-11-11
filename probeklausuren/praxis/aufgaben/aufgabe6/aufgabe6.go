@@ -13,6 +13,31 @@ MAX. PUNKTE: 10
 // Ursprungslisten, mehrfach vorkommende Elemente werden entsprechend wiederholt.
 // Die Elemente aus l1 kommen vor denen aus l2 in der Ergebnisliste vor.
 func SymmetricDifference(l1, l2 []int) []int {
-	// TODO
-	return []int{}
+	test := false
+	list := []int{}
+	for i := 0; i < len(l1); i++ {
+		for s := 0; s < len(l2); s++ {
+			if l1[i] == l2[s] {
+				test = true
+			}
+
+		}
+		if !test {
+			list = append(list, l1[i])
+		}
+		test = false
+	}
+	for i := 0; i < len(l2); i++ {
+		for s := 0; s < len(l1); s++ {
+			if l2[i] == l1[s] {
+				test = true
+			}
+
+		}
+		if !test {
+			list = append(list, l2[i])
+		}
+		test = false
+	}
+	return list
 }
