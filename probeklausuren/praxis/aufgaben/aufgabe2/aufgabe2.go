@@ -33,10 +33,7 @@ func ExcludeStringsBetween(list []string, first, last string) []string {
 		return []string{}
 	}
 	for s := 0; s < len(list); s++ {
-		if s < erste {
-			Liste = append(Liste, list[s])
-		}
-		if s > letzte {
+		if s < erste || s > letzte {
 			Liste = append(Liste, list[s])
 		}
 	}
