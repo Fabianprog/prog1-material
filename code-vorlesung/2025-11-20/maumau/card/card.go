@@ -41,6 +41,8 @@ func (c Card) Picture() string {
 // Matches erwartet eine zweite Karte und liefert true,
 // falls diese zur aktuellen Karte passt.
 func (c Card) Matches(o Card) bool {
-	// TODO
-	return true
+	if c.Suit == o.Suit || c.Rank == o.Rank {
+		return true
+	}
+	return false
 }

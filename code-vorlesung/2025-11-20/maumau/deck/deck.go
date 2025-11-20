@@ -47,3 +47,11 @@ func (d *Deck) Add(card card.Card) {
 
 // Top liefert die oberste Karte, ohne sie zu entfernen.
 // TODO
+func (d Deck) Top() card.Card {
+	if len(d.Cards) == 0 {
+		return card.Card{}
+	}
+
+	return d.Cards[len(d.Cards)-1]
+
+}
